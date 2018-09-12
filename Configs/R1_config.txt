@@ -69,7 +69,6 @@ interface GigabitEthernet0/0
  ip address 10.1.1.1 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
- shutdown
  duplex auto
  speed auto
  media-type rj45
@@ -78,7 +77,6 @@ interface GigabitEthernet0/1
  ip address dhcp
  ip nat outside
  ip virtual-reassembly in
- shutdown
  duplex auto
  speed auto
  media-type rj45
@@ -110,6 +108,25 @@ access-list 1 permit any
 !
 control-plane
 !
+banner motd ^C
+##################################################################################
+#                                                                                #
+#                 This is a Linux + Cisco lab enviroment Device                  #
+#                          Unauthorized users prohibited                         #
+#                                                                                #
+#        ,`\ \    `-`.               88                         88               #
+#       /   \ '``-.   `              88                         88               #
+#     .-.  ,       `___:    88   88  88,888,  88   88  ,88888, 88888  88   88    #
+#    (:::) :        ___     88   88  88   88  88   88  88   88  88    88   88    #
+#     `-`  `       ,   :    88   88  88   88  88   88  88   88  88    88   88    #
+#       \   / ,..-`   ,     88   88  88   88  88   88  88   88  88    88   88    #
+#        `./ /    .-.`      '88888'  '88888'  '88888'  88   88  '8888 '88888'    #
+#         `-..-(   )                                                             #
+#                                                                                #
+#                                                                                #
+#                                                                                #
+##################################################################################
+^C
 !
 line con 0
  exec-timeout 0 0
